@@ -28,7 +28,7 @@ export function Subscribe() {
 
   return (
     <div className="bg-blur flex min-h-screen flex-col items-center bg-cover bg-no-repeat">
-      <div className="mx-auto flex flex-col sm:mt-20 sm:w-full sm:max-w-[1100px] sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto flex flex-col sm:mt-20 sm:w-full sm:items-center sm:justify-between md:max-w-[800px] md:flex-row lg:max-w-[1000px] xl:max-w-[1100px]">
         <div className="flex max-w-[640px] flex-col items-center">
           <div className="align-center my-10 flex justify-center">
             <Logo />
