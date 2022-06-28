@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Logo } from '../assets/images/Logo';
+import { Logo } from '../assets/Logo';
 
 export function Subscribe() {
   // const [name, setName] = React.useState('');
@@ -51,7 +51,7 @@ export function Subscribe() {
         </div>
       </div>
       <img
-        src="/src/assets/images/imagem.png"
+        src="/src/assets/imagem.png"
         className="mt-10"
         alt="Subscribe code"
       />
