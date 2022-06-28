@@ -72,7 +72,13 @@
         "devDependencies": ["**/*.spec.js"]
       }
     ],
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      "warn",
+      {
+        "singleQuote": true,
+        "semi": true
+      }
+    ],
     "react/jsx-filename-extension": [
       1,
       {

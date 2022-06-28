@@ -1,6 +1,6 @@
-import { gql, useQuery } from "@apollo/client";
+import { gql, useQuery } from '@apollo/client';
 
-import { Lesson } from "./Lesson";
+import { Lesson } from './Lesson';
 
 const GET_LESSONS_QUERY = gql`
   query MyQuery {
@@ -20,7 +20,7 @@ interface IGetLessonsQueryResponse {
     title: string;
     slug: string;
     availableAt: Date;
-    lessonType: "live" | "class";
+    lessonType: 'live' | 'class';
   }[];
 }
 

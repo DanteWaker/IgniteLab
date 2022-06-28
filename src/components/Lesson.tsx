@@ -1,14 +1,14 @@
 /* eslint-disable import/no-duplicates */
-import { isPast, format } from "date-fns";
-import { ptBR } from "date-fns/locale";
-import { CheckCircle, Lock } from "phosphor-react";
-import { Link } from "react-router-dom";
+import { isPast, format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
+import { CheckCircle, Lock } from 'phosphor-react';
+import { Link } from 'react-router-dom';
 
 interface ILessonProps {
   title: string;
   slug: string;
   availableAt: Date;
-  lessonType: "live" | "class";
+  lessonType: 'live' | 'class';
 }
 export function Lesson(props: ILessonProps) {
   const { title, slug, availableAt, lessonType } = props;
@@ -42,7 +42,7 @@ export function Lesson(props: ILessonProps) {
             className="rounded border border-green-300 px-2 py-[0.125rem] 
           text-xs font-bold text-white"
           >
-            {lessonType === "live" ? "AO VIVO" : "AULA PRÁTICA"}
+            {lessonType === 'live' ? 'AO VIVO' : 'AULA PRÁTICA'}
           </span>
         </header>
 

@@ -1,9 +1,9 @@
-import { ApolloProvider } from "@apollo/client";
-import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { ApolloProvider } from '@apollo/client';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
-import { client } from "./middleware/apollo";
-import { Router } from "./routes/Router";
+import { client } from './middleware/apollo';
+import { Router } from './routes/Router';
 
 function App() {
   return (

@@ -1,6 +1,11 @@
-import { Logo } from "../assets/images/Logo";
+import React from 'react';
+
+import { Logo } from '../assets/images/Logo';
 
 export function Subscribe() {
+  // const [name, setName] = React.useState('');
+  // const [email, setEmail] = React.useState('');
+
   return (
     <div className="flex min-h-screen flex-col items-center bg-blur bg-cover bg-no-repeat">
       <div className="mx-auto mt-20 flex w-full max-w-[1100px] items-center justify-between">
