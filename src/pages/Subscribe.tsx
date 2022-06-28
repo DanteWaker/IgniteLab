@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { FormEvent } from 'react';
 
 import { Logo } from '../assets/Logo';
 
 export function Subscribe() {
-  // const [name, setName] = React.useState('');
-  // const [email, setEmail] = React.useState('');
+  const [name, setName] = React.useState('');
+  const [email, setEmail] = React.useState('');
+
+  function handleSubscribe(event: FormEvent) {
+    event?.preventDefault();
+
+    console.log(name, email);
+  }
 
   return (
     <div className="flex min-h-screen flex-col items-center bg-blur bg-cover bg-no-repeat">
@@ -13,7 +19,7 @@ export function Subscribe() {
           <Logo />
           <h1 className="mt-8 text-[2.5rem] leading-tight">
             Construa uma
-            <strong className="text-blue-500">aplicação completa</strong>, do
+            <strong className="text-blue-500"> aplicação completa</strong>, do
             zero, com
             <strong className="text-blue-500"> React</strong>
           </h1>
@@ -29,16 +35,21 @@ export function Subscribe() {
             Inscreva-se gratuitamente
           </strong>
 
-          <form action="" className="flex w-full flex-col gap-2">
+          <form
+            onSubmit={handleSubscribe}
+            className="flex w-full flex-col gap-2"
+          >
             <input
               className="h-14 rounded bg-gray-900 px-5"
               type="text"
               placeholder="Seu nome completo"
+              onChange={(event) => setName(event.target.value)}
             />
             <input
               className="h-14 rounded bg-gray-900 px-5"
               type="email"
               placeholder="Digite seu e-mail"
+              onChange={(event) => setEmail(event.target.value)}
             />
 
             <button
