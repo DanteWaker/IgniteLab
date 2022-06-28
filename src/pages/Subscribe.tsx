@@ -1,15 +1,28 @@
 import React, { FormEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { Logo } from '../assets/Logo';
+import { useCreateSubscriberMutation } from '../middleware/graphql/generated';
 
 export function Subscribe() {
+  const navigate = useNavigate();
+
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
 
-  function handleSubscribe(event: FormEvent) {
+  const [createSubscriber, { loading }] = useCreateSubscriberMutation();
+
+  async function handleSubscribe(event: FormEvent) {
     event?.preventDefault();
 
-    console.log(name, email);
+    await createSubscriber({
+      variables: {
+        name,
+        email,
+      },
+    });
+
+    navigate('/event');
   }
 
   return (
@@ -54,7 +67,8 @@ export function Subscribe() {
 
             <button
               type="submit"
-              className="mt-4 rounded bg-green-500 py-4 text-sm font-bold uppercase transition-colors hover:bg-green-700"
+              disabled={loading}
+              className="mt-4 rounded bg-green-500 py-4 text-sm font-bold uppercase transition-colors hover:bg-green-700 disabled:opacity-50"
             >
               Garantir minha vaga
             </button>
